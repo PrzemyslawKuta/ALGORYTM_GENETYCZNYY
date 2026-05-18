@@ -20,6 +20,19 @@ TParam::TParam(double x_start, double x_end, double dx, double val)
 	name = "";
 }
 
+TParam::TParam(std::string name, double x_start, double x_end, double dx)
+{
+	name = name;
+	set_range(x_start, x_end, dx);
+}
+
+TParam::TParam(std::string name, double x_start, double x_end, double dx, double val)
+{
+	name = name;
+	set_range(x_start, x_end, dx);
+	set_val(val);
+}
+
 void TParam::set_rand_val()
 {
 	int vals_count = fabs(x_end - x_start) / dx + 1;

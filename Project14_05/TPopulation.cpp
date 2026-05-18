@@ -4,6 +4,7 @@
 
 using namespace std;
 
+
 TPopulation::TPopulation(unsigned int cands_count)
 {
 	candidated_count = cands_count;
