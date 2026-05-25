@@ -1,27 +1,23 @@
 #include <iostream>
-#include <vector>
-#include "TKlasa.h"
+#include <cstdlib>
+#include <time.h>
+
+#include "TAlgorithm.h"
 
 using namespace std;
 
 int main()
 {
-	vector <TKlasa> obiekty;
+	srand(time(0));
 
-	unsigned int count;
-	cout << "Podaj liczbe obiektow do utworzenia: ";
-	cin >> count;
-	cout<<"\n";
+	unsigned int candidates_count = 5;
+	unsigned int max_population_count = 20;
+	unsigned int min_improvement_proc = 2;
 
-		for (int i = 0;i < count;i++)
-		{
-			obiekty.push_back({ i });
-		}
-
-	for (int i = 0; i < count;i++)
-	{
-		obiekty[i].info();
-	}
+	TAlgorithm task{ candidates_count,
+	max_population_count,
+	min_improvement_proc };
+	task.run();
 
 	return 0;
 }

@@ -14,6 +14,14 @@ TKlasa::TKlasa(int init_val)
 	this->init_val = init_val;
 }
 
+TKlasa::~TKlasa()
+{
+	cout << "usunieto obiekt klasy TKlasa o numerze:" << _id << " || ";
+
+	TKlasa::count -= 1;
+	cout << "pozostaly" << TKlasa::count << "obiekt klasy TKlasa \n\n";
+}
+
 void TKlasa::set_vector_size(unsigned int size)
 {
 	vector_size = size;

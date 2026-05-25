@@ -127,12 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="TAlgorithm.h" />
     <ClInclude Include="TKlasa.h" />
     <ClInclude Include="TPopulation.h" />
     <ClInclude Include="TCandidate.h" />
     <ClInclude Include="TParam.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="dynamiczneTworzenieObiektów.cpp" />
+    <ClCompile Include="TAlgorithm.cpp" />
     <ClCompile Include="TKlasa.cpp" />
     <ClCompile Include="TParam.cpp" />
     <ClCompile Include="main.cpp" />
