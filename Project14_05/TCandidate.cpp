@@ -19,6 +19,23 @@ void TCandidate::rate()
 	mark = pow(x1, 2) + x2;
 }
 
+TCandidate::TCandidate(const TCandidate& original)
+{
+	mark = original.get_mark();
+
+	for (int i = 0;i < GENS_COUNT;i++)
+	{
+		double x_start = original.genotype[i].get_x_start();
+		double x_end = original.genotype[i].get_x_end();
+		double dx = original.genotype[i].get_dx();
+		genotype[i].set_range(x_start, x_end, dx);
+
+		double val = original.get_gen_val(i);
+		genotype[i].set_val(val);
+	}
+}
+
+
 void TCandidate::rand_gens_val()
 {
 	for (int i = 0;i < GENS_COUNT;i++)

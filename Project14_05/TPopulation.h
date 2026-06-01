@@ -20,4 +20,7 @@ public:
 	unsigned int get_candidates_count() { return candidate_count; }
 	double get_best_val() { return best_val; }
 	void info();
+
+private:
+	const TCandidate* get_candidate_wsk(int _id)const;
 };
